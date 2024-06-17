@@ -1,0 +1,36 @@
+# Copyright 1999-2024 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+
+inherit cmake xdg
+
+DESCRIPTION="DigiDoc4 Client is an application for digitally signing and encrypting documents"
+HOMEPAGE="https://id.ee https://github.com/open-eid/DigiDoc4-Client"
+SRC_URI="https://github.com/open-eid/DigiDoc4-Client/releases/download/v${PV}/qdigidoc4-${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/qdigidoc4-${PV}"
+
+LICENSE="LGPL-2.1"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+
+DEPEND="
+	>=dev-libs/libdigidocpp-3.17
+	sys-apps/pcsc-lite
+	net-nds/openldap
+	dev-libs/openssl
+	dev-qt/qtbase[gui,network,widgets]
+	dev-qt/qt5compat
+	dev-qt/qtsvg
+	dev-qt/qtprintsupport
+	dev-libs/flatbuffers
+"
+
+RDEPEND="
+	${DEPEND}
+	dev-libs/opensc[pcsc-lite]
+"
+
+BDEPEND="
+	dev-qt/qttools:6[linguist]
+"

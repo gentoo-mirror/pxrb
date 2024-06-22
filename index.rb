@@ -2,7 +2,6 @@
 
 # this program MUST be ran from
 # the root folder of the overlay
-# e.g. "./bin/index.rb"
 
 # this program indexes all packages
 # in an overlay and puts it into
@@ -10,7 +9,7 @@
 # external sources.
 
 # if you have unwanted entries getting in to the file, add them here to ignore them
-ignore = [".", "..", ".git", "metadata", "profiles", "bin"]
+ignore = [".", "..", ".git", "metadata", "profiles"]
 categories = []
 packages = []
 

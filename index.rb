@@ -1,19 +1,27 @@
 #!/usr/bin/ruby
 
-# this program MUST be ran from
+#Copyright (c) 2024 pxrb
+
+#Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+#The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+# This program must be ran from
 # the root folder of the overlay
+# and assumes that it is
 
-# this program indexes all packages
+# This program indexes all packages
 # in an overlay and puts it into
-# a file which can be used by
-# external sources.
+# a file.
 
-# if you have unwanted entries getting in to the file, add them here to ignore them
+# If you have unwanted entries getting in to the file, add them here to ignore them
 ignore = [".", "..", ".git", "metadata", "profiles"]
 categories = []
 packages = []
 
-# detects if a file is a file or a directory
+# Detects if a file is a file or a directory
 # and if it is a file, adds it to ignore
 Dir.foreach('.') do |filename|
   if File.directory?(filename) == false
@@ -21,8 +29,6 @@ Dir.foreach('.') do |filename|
   end
 end
 
-# this assumes that the program is being run
-# from the root of the overlay
 Dir.foreach('.') do |filename|
   if ignore.include?(filename) == true
     next
@@ -46,4 +52,4 @@ packages = packages.join("\n")
 
 File.write("packages", packages)
 
-puts "List of packages generated."
+puts "List of overlay packages generated."

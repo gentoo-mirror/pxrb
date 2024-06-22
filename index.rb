@@ -34,7 +34,7 @@ for i in categories
   Dir.foreach(i) do |filename|
     if ignore.include?(filename) == true
       next
-    elsif File.directory?(filename) == false
+    elsif File.directory?(i + "/" + filename) == false
       ignore << filename
       next
     end

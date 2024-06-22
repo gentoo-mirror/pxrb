@@ -1,10 +1,10 @@
 --- a/client/CMakeLists.txt
 +++ b/client/CMakeLists.txt
 @@ -1,13 +1,5 @@
--add_executable( TSLDownload TSLDownload.cpp )
--target_link_libraries(TSLDownload Qt${QT_VERSION_MAJOR}::Network)
- get_target_property(qtCore_install_prefix Qt${QT_VERSION_MAJOR}::qmake IMPORTED_LOCATION)
- get_filename_component(qtCore_install_prefix ${qtCore_install_prefix} DIRECTORY)
+ add_executable( TSLDownload TSLDownload.cpp )
+ target_link_libraries(TSLDownload Qt${QT_VERSION_MAJOR}::Network)
+-get_target_property(qtCore_install_prefix Qt${QT_VERSION_MAJOR}::qmake IMPORTED_LOCATION)
+-get_filename_component(qtCore_install_prefix ${qtCore_install_prefix} DIRECTORY)
 -add_custom_command(
 -	OUTPUT TSL.qrc
 -	DEPENDS TSLDownload

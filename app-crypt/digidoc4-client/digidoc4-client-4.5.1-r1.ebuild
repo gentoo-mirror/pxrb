@@ -37,7 +37,10 @@ BDEPEND="
 	dev-qt/qttools:6[linguist]
 "
 
-PATCHES=( "${FILESDIR}"/"${PN}"-sandbox-compat.diff )
+PATCHES=(
+	"${FILESDIR}"/"${PN}"-sandbox-compat.diff
+	"${FILESDIR}"/"${PN}"-optional.diff
+)
 
 src_prepare() {
 	cmake_src_prepare

@@ -3,17 +3,19 @@
 
 EAPI=8
 
-inherit xdg
+inherit rpm xdg
 
-DESCRIPTION="Official Proton Mail Linux app"
+MY_PV=$(ver_cut 1-3)
+
+DESCRIPTION="Official Beta Proton Mail Linux app"
 HOMEPAGE="https://proton.me https://github.com/ProtonMail/inbox-desktop"
-SRC_URI="https://proton.me/download/mail/linux/ProtonMail-desktop-beta.deb"
+SRC_URI="https://github.com/ProtonMail/inbox-desktop/releases/download/v${MY_PV}/proton-mail-${MY_PV}-1.x86_64.rpm -> ${P}.rpm"
+S="${WORKDIR}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="pulseaudio"
-RESTRICT="test"
 
 DEPEND="
 	gui-libs/gtk
@@ -37,15 +39,13 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	mkdir "${S}"
-	unpack "${WORKDIR}/data.tar.xz"
-	mv "${WORKDIR}/usr" "${S}"
-}
+QA_PREBUILT="opt/proton-mail/*"
 
 src_install() {
-	dodoc usr/share/doc/proton-mail/copyright
-        rm -rf "${S}"/usr/share/{doc,lintian} || die "Failed to remove /usr/share/{doc,lintian}!"
-	cp -R "${S}/usr" "${D}/" || die "Install failed!"
+	into /opt
+	cp -r "${S}"/usr/lib/* "${D}"/opt/proton-mail || die "Failed to install!"
+	dosym "/opt/proton-mail/Proton Mail Beta" "/usr/bin/proton-mail"
+	insinto /usr/share
+	doins -r "${S}/usr/share/pixmaps"
+	doins -r "${S}/usr/share/applications"
 }

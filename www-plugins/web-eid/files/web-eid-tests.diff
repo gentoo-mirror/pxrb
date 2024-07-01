@@ -1,0 +1,36 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -47,7 +47,6 @@ if(APPLE)
+     add_subdirectory(src/mac)
+ endif()
+ 
+-enable_testing()
+ add_subdirectory(tests/mock-ui)
+ add_subdirectory(tests/tests)
+ 
+--- a/lib/libelectronic-id/CMakeLists.txt
++++ b/lib/libelectronic-id/CMakeLists.txt
+@@ -62,10 +62,6 @@ target_link_libraries(${PROJECT_NAME}
+ 
+ add_subdirectory(lib/libpcsc-cpp)
+ 
+-# Common testing options.
+-
+-enable_testing()
+-
+ find_package(GTest REQUIRED)
+ 
+ # Mock tests that use libpcsc-mock to mock PC/SC API calls.
+--- a/lib/libelectronic-id/lib/libpcsc-cpp/CMakeLists.txt
++++ b/lib/libelectronic-id/lib/libpcsc-cpp/CMakeLists.txt
+@@ -56,10 +56,6 @@ else()
+   target_link_libraries(pcsc INTERFACE PkgConfig::PCSC)
+ endif()
+ 
+-# Common testing options.
+-
+-enable_testing()
+-
+ find_package(GTest REQUIRED)
+ 
+ # Mock tests that use libpcsc-mock to mock PC/SC API calls.

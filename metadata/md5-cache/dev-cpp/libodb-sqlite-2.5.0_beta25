@@ -13,4 +13,4 @@ RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://git.codesynthesis.com/cgit/odb/libodb-sqlite/snapshot/v2.5.0-b.25.tar.gz -> libodb-sqlite-2.5.0_beta25.tar.gz https://download.build2.org/0.15.0/build2-toolchain-0.15.0.tar.xz
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe
-_md5_=12685001e0e4fe2f3a09dfd51f6feddb
+_md5_=bdc03f116fd9f134816bcfae5394273c

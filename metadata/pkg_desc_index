@@ -1,0 +1,24 @@
+app-crypt/digidoc4-client 4.5.1 4.5.1-r1 4.5.1-r2 4.5.1-r3: DigiDoc4 Client is an application for digitally signing and encrypting documents
+dev-cpp/libcutl 1.11.0: A collection of C++ libraries (successor of libcult)
+dev-cpp/libodb 2.5.0_beta25: Common ODB runtime library
+dev-cpp/libodb-sqlite 2.5.0_beta25: Common ODB runtime library
+dev-cpp/libxsd-frontend 2.1.0: A compiler frontend for the W3C XML Schema definition language
+dev-cpp/xsd 4.2.0: An open-source, cross-platform W3C XML Schema to C++ data binding compiler
+dev-libs/libdigidocpp 3.17.1: DigiDoc digital signature library
+dev-libs/xml-security-c 2.0.4: Apache C++ XML security libraries
+dev-util/build2 0.16.0: Cross-platform toolchain for building and packaging C++ code
+dev-util/cli 1.2.0: Command Line Interface compiler for C++
+mail-client/protonmail-bin 1.0.4_beta-r1: Official Beta Proton Mail Linux app
+media-fonts/meslo-nerd 2.3.3: Customized version of Apple's Menlo font, patched by romkatv
+net-vpn/proton-vpn-gtk-app 4.3.2: Official ProtonVPN Linux app
+net-vpn/python-proton-core 0.1.16: Contains core logic used by the other ProtonVPN components.
+net-vpn/python-proton-keyring-linux 0.0.2: keyring element for ProtonVPN
+net-vpn/python-proton-keyring-linux-secretservice 0.0.2: keyring secret service element for ProtonVPN
+net-vpn/python-proton-vpn-api-core 0.24.4: API exposure for ProtonVPN components
+net-vpn/python-proton-vpn-connection 0.14.4: Interface for ProtonVPN connection backends
+net-vpn/python-proton-vpn-killswitch 0.4.0: Defines the ProtonVPN killswitch interface
+net-vpn/python-proton-vpn-killswitch-network-manager 0.4.4: Implements the ProtonVPN killswitch using NetworkManager
+net-vpn/python-proton-vpn-logger 0.2.1: General purpose logging for ProtonVPN
+net-vpn/python-proton-vpn-network-manager 0.4.2: Provides components for ProtonVPN to interact with NetworkManager
+net-vpn/python-proton-vpn-network-manager-openvpn 0.0.7: Provides OpenVPN backend for ProtonVPN
+www-plugins/web-eid 2.5.0: Web eID native browser extension

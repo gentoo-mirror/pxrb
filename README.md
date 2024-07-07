@@ -1,3 +1,7 @@
+# REPOSITORY NO LONGER MAINTAINED, PLEASE DO NOT USE IT ANYMORE
+
+I have decided to switch to Arch Linux, this repository will no longer be maintained. Please disable this repository as soon as you can. You can decide to fork this repository and sucede it, or use another one.
+
 # overlay
 
 my gentoo overlay
